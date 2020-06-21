@@ -7,53 +7,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="styling.css">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
     <script src="https://use.fontawesome.com/d4adba3734.js?SameSite=None"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!--SLIDESHOW CODE FROM https://www.the-art-of-web.com/css/fading-slideshow-no-jquery/-->
-    <link rel="stylesheet" type="text/css" href="slideshow.css">
-    <script src="slideshow.js"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".nav");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height() + 100);
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div id="header">
-        <div id="nav">
-            <div>Home</div>
-            <div class="leftBorder">Applications</div>
-            <div class="leftBorder">Program Enhancements</div>
-            <div class="leftBorder">Contact</div>
-        </div>
-        <img id="headerImg"
-            src="http://schools.peelschools.org/sec/tlkennedy/PublishingImages/Lists/CameraReadySchools/AllItems/Copy%20of%20IMG_3503%20(2).JPG">
-        <div id="headerText">
-            <div id="headerText1">
-                <h1><span class="brandRedText">I</span>nternational <span class="brandRedText">B</span>usiness and <span
-                        class="brandRedText">T</span>echnology</h1>
-            </div>
-            <div id="headerText2">
-                <h3>TL Kennedy Secondary School</h3>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <h1>What is the IBT Program?</h1>
-        <br><br>
-        <span><em>
-                IBT is an enriched program that provides students with comprehensive <b>business</b> and
-                <b>technological</b> skills
-                to have a competitive edge in the global community.</em>
-        </span>
-        <div class="leftHalf">content</div>
-        <div id="imageSlide">
-            <a><img src="../TLK_IBT_SITE/IBT-Photos/IMG_1892.JPG" width="360" height="270"></a>
-            <a><img src="../TLK_IBT_SITE/IBT-Photos/IMG_1894.JPG" width="360" height="270"></a>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item nav-end">
+            <a class="nav-link" href="#introDiv">About</a>
+        </li>
+        <li class="nav-item nav-end">
+            <a class="nav-link" href="#">Program Enhancements</a>
+        </li>
+        <li class="nav-item nav-end">
+            <a class="nav-link" href="#">Applications</a>
+        </li>
+        <li class="nav-item nav-end">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+    </ul>
+
+    <div id="headerDiv" class="card text-white">
+        <img id="resize-header"
+            src="http://schools.peelschools.org/sec/tlkennedy/PublishingImages/Lists/CameraReadySchools/AllItems/Copy%20of%20IMG_3503%20(2).JPG"
+            class="card-img" alt="...">
+        <div id="headerText" class="card-img-overlay">
+            <h1 class="card-title"><span class="tlkRed">I</span>nternational <span class="tlkRed">B</span>usiness and
+                <span class="tlkRed">T</span>echnology</h1>
+            <h3 class="card-text">T.L. Kennedy Secondary School</h3>
         </div>
     </div>
-    <div id="footer">
+
+    <div id="introDiv" class="containerDiv splitDiv">
+        <div class="leftSplit">
+            <h1>Giving Students a <span class="tlkRed">Competitive Edge</span> <br> in the <span class="tlkRed">Global
+                    Community</span></h1>
+            <br>
+            <p>The IBT Program at T.L. Kennedy is an enriched program that focuses on international business, and
+                technology skill.</p>
+
+            <p>It strives to integrate the objectives of:</p>
+            <ul class="indentList">
+                <li>21st century skills</li>
+                <li>Project-based learning</li>
+                <li>Well-rounded citizens</li>
+                <li>Productive global participation</li>
+            </ul>
+        </div>
+        <div class="rightSplit">
+            <img class="imageCircle" src="IBT-Photos/IMG_8166.JPG">
+        </div>
+    </div>
+
+    <footer id="footer">
         Made with 💖 by Hannah Guo, 2020 IBT Graduate.
-    </div>
+    </footer>
 </body>
 
 </html>
