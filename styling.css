@@ -150,6 +150,16 @@ html {
     }
 
     .modal-dialog {}
+
+    #ibtStudent {
+        background-image: url("images/IMG_1909_cropped.jpg");
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: brightness(22%);
+        padding: 50px;
+        display: inline-block;
+        width: auto;
+    }
 }
 
 /* For Desktops */
@@ -242,6 +252,15 @@ html {
         width: 800px;
         max-width: 80vw;
     }
+
+    #ibtStudent {
+        background-image: url("images/IMG_1909_cropped.jpg");
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: brightness(22%);
+        padding: 50px;
+        display: inline-block;
+    }
 }
 
 @keyframes fadeIn {
@@ -310,15 +329,6 @@ html {
 #headerDiv {
     padding: 0px;
     background-color: black;
-}
-
-#ibtStudent {
-    background-image: url("images/IMG_1909_cropped.jpg");
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: brightness(22%);
-    padding: 50px;
-    display: inline-block;
 }
 
 #ibtStudent>h1 {
