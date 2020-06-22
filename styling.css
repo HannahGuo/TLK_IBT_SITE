@@ -50,6 +50,7 @@ html {
     -o-animation: fadeIn ease 1.5s;
     -ms-animation: fadeIn ease 1.5s;
     animation-iteration-count: 1;
+    animation-delay: 0.3s;
     animation-fill-mode: forwards;
 }
 
@@ -60,13 +61,17 @@ html {
     -moz-animation: fadeIn ease 1.5s;
     -o-animation: fadeIn ease 1.5s;
     -ms-animation: fadeIn ease 1.5s;
-    animation-delay: 0.8s;
+    animation-delay: 1.1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 /* For Phones */
 @media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
     .nav {
         position: relative;
         z-index: 20;
@@ -127,6 +132,24 @@ html {
         background-color: black;
         display: inline-block;
     }
+
+    .imageCircle {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    #sheridanPC {
+        width: 250px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    .modal-dialog {}
 }
 
 /* For Desktops */
@@ -198,6 +221,27 @@ html {
         color: white;
         padding: 100px;
     }
+
+    .imageCircle {
+        width: 30em;
+        height: 30em;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    #sheridanPC {
+        width: 500px;
+        height: 400px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    .modal-dialog {
+        width: 800px;
+        max-width: 80vw;
+    }
 }
 
 @keyframes fadeIn {
@@ -263,15 +307,9 @@ html {
     margin-left: 15px;
 }
 
-.imageCircle {
-    width: 30em;
-    height: 30em;
-    object-fit: cover;
-    border-radius: 100%;
-}
-
 #headerDiv {
     padding: 0px;
+    background-color: black;
 }
 
 #ibtStudent {
@@ -300,11 +338,6 @@ html {
     text-align: left;
 }
 
-.modal-dialog {
-    width: 800px;
-    max-width: 80vw;
-}
-
 .modal-content {
     padding: 30px;
     border-radius: 0.5rem;
@@ -326,15 +359,6 @@ html {
     /* ie8 */
     object-fit: cover;
     margin: 0 auto;
-}
-
-#sheridanPC {
-    width: 500px;
-    height: 400px;
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    border-radius: 0.5rem;
 }
 
 .brightFilter {
