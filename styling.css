@@ -53,7 +53,7 @@ html {
     animation-fill-mode: forwards;
 }
 
-#headerText>h3 {
+#headerText>h4 {
     opacity: 0;
     animation: fadeIn ease 1.5s;
     -webkit-animation: fadeIn ease 1.5s;
