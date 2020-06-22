@@ -65,36 +65,139 @@ html {
     animation-fill-mode: forwards;
 }
 
-.nav {
-    position: fixed;
-    z-index: 2;
-    background-color: none;
-    width: 100%;
-    margin-top: 5px;
+/* For Phones */
+@media (max-width: 800px) {
+    .nav {
+        position: relative;
+        z-index: 20;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        text-align: center;
+    }
+
+    .nav-item {
+        padding: 0px 40px;
+    }
+
+    .nav-end,
+    .nav-line {
+        border-bottom: 2px solid white;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: lightgray;
+    }
+
+    #programEnhancements>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerDiv {
+        padding: 50px;
+        display: inline-block;
+    }
+
+    .splitDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ibtStudent>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ibtStudent>div>div {
+        margin: 20px 0px;
+    }
+
+    #courseTable {
+        display: none;
+    }
+
+    #mapDiv {
+        color: white;
+        background-color: black;
+        display: inline-block;
+    }
 }
 
-.nav.scrolled {
-    background-color: black !important;
-    transition: background-color 0.4s ease;
-    transition-delay: 0.2s;
-    margin-top: 0px;
-    width: 100%;
-}
+/* For Desktops */
+@media (min-width: 801px) {
+    .nav {
+        position: fixed;
+        z-index: 20;
+        width: 100%;
+        margin-top: 5px;
+    }
 
-.nav-item {
-    padding: 0px 40px;
-}
+    .nav.scrolled {
+        background-color: black !important;
+        transition: background-color 0.2s ease;
+        margin-top: 0px;
+        width: 100%;
+    }
 
-.nav-end {
-    border-left: 2px solid white;
-}
+    .nav-item {
+        padding: 0px 40px;
+    }
 
-.nav-link {
-    color: white;
-}
+    .nav-end {
+        border-left: 2px solid white;
+    }
 
-.nav-link:hover {
-    color: lightgray;
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: lightgray;
+    }
+
+    #programEnhancements>div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .containerDiv {
+        padding: 100px;
+        display: inline-block;
+    }
+
+    .leftSplit {
+        float: left;
+        width: 50%;
+    }
+
+    .rightSplit {
+        float: right;
+        width: 40%;
+    }
+
+    .biggerRightSplit {
+        float: right;
+        width: 50%;
+    }
+
+    #ibtStudent>div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #mapDiv {
+        background-image: url(images/tlk.jpg);
+        background-repeat: no-repeat;
+        color: white;
+        padding: 100px;
+    }
 }
 
 @keyframes fadeIn {
@@ -156,28 +259,112 @@ html {
     color: white;
 }
 
-.containerDiv {
-    padding: 100px;
-    height: 800px;
-}
-
-.leftSplit {
-    float: left;
-    width: 50%;
-}
-
-.rightSplit {
-    float: right;
-    width: 40%;
-}
-
 .indentList {
     margin-left: 15px;
 }
 
 .imageCircle {
-    width: 500px;
-    height: 500px;
+    width: 30em;
+    height: 30em;
     object-fit: cover;
     border-radius: 100%;
+}
+
+#headerDiv {
+    padding: 0px;
+}
+
+#ibtStudent {
+    background-image: url("images/IMG_1909_cropped.jpg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(22%);
+    padding: 50px;
+    display: inline-block;
+}
+
+#ibtStudent>h1 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#ibtStudent>div>div {
+    border-radius: 0.5rem;
+    padding: 20px;
+    text-align: center;
+    width: 20em;
+}
+
+#ibtStudent>div>div>div>ul {
+    text-align: left;
+}
+
+.modal-dialog {
+    width: 800px;
+    max-width: 80vw;
+}
+
+.modal-content {
+    padding: 30px;
+    border-radius: 0.5rem;
+}
+
+#programTable {
+    display: flex;
+    max-width: 100%;
+}
+
+#programTable>div {
+    flex: 1;
+}
+
+.sameSizeImg {
+    max-width: 90%;
+    height: 400px;
+    width: auto\9;
+    /* ie8 */
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+#sheridanPC {
+    width: 500px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.brightFilter {
+    filter: brightness(50%);
+    object-fit: cover;
+    height: 800px;
+    width: 100%;
+}
+
+#courseTable {
+    table-layout: fixed;
+}
+
+
+#courseTable>caption {
+    text-align: center;
+}
+
+#fillerQuote {
+    padding: 100px;
+    background-color: black;
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+#whiteLink {
+    color: lightblue;
+}
+
+#tlkMap {
+    width: 100%;
 }
